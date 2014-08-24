@@ -1,0 +1,124 @@
+<div class='text_content_box'>
+    <h1>Digimakers Raspberry Pi Camera Workshop</h1>
+    <hr/>
+    <h2>1. Introduction</h2>
+    <p>
+    Hello there! Welcome to the Digimakers @-bristol picamera workshop! By the 
+    time you are finished here you'll know all about the Raspberry Pi camera 
+    module and how to control it using the <a href="http://www.python.org" target="_blank">
+    Python</a> programming
+    language. Obviously, a little prior experience with Python is good but never fear, 
+    even if you have  never experienced programming or the Raspberry Pi we will soon
+    have you up'n at em in no time at all.
+    </p>
+    <p>The main aim of the workshop is to give you a whistle stop tour of the
+    <a target="_blank" href="http://www.raspberrypi.org/archives/5672">picamera 
+    python module</a>. This is essentially 
+    a nice and easy way of controlling the camera without having to use the 
+    <i>raspistill</i> and <i>raspivid</i> programs. This means we can be a lot 
+    clevererrerr in what we build!
+    </p>
+    <p>
+        <img src="/projects/picam/img/raspbian-desktop-terminal.png" 
+        style="border:2px solid grey; border-radius: 8px; text-align:right;
+        margin-left: 15px; float: right;"/>
+        The first thing you will need to do is to make sure that you have the picamera
+        module installed on your Raspberry Pi. Make sure you are in the graphical environment
+        for the pi (you might have to type <i>startx</i> when you first log in) and open up
+        a terminal window. You can do this by clicking on the <i>LXTerminal</i> icon on your
+        desktop.  
+    <p>
+    If you have never used the camera before the first thing you will need to do is to
+    enable it. Type <i>raspiconfig</i> and press the down arrow key until you reach 
+    "Enable Camera", press enter and enable the camera.
+    <span style="text-align:center;">You only need to do this if you have never used 
+    your picamera before!</span>
+    </p>
+    Once you have done that exit the tool, remembering to reboot the pi so the install can
+    finish. When you log back in you can open a terminal window again and type the
+    following command to install the library:
+    <code>sudo apt-get install python-picamera</code>
+    That's it, you are all ready to go! Lets get programming!
+    </p>
+
+    <hr/>
+
+    <h2>2. Hello <s>World!</s> PiCamera!</h2>
+    <p>
+        For this first task we are going to make a very simple program that displays the 
+        camera's picture on your Pi for a few seconds and then makes it disappear. The code below
+        shows you how to do this. Lazy people can download it 
+        <a target="_blank" href="/projects/picam/code/hello_world_cam.py">here</a>.
+    </p>
+    <code>
+        # import the two modules that we will need<br/>
+        import time<br/>
+        import picamera<br/>
+        <br/>
+        # create our camera variable. We will be using this A LOT so remember it!<br/>
+        cam = picamera.PiCamera()<br/>
+        <br/>
+        # start displaying the image preview on screen.<br/>
+        cam.start_preview()<br/>
+        <br/>
+        # wait for ten seconds<br/>
+        time.sleep(10)<br/>
+        <br/>
+        # close the preview window<br/>
+        cam.stop_preview()<br/>
+        <br/>
+        # Always make sure you close the connection to your camera!<br/>
+        # Otherwise you won't be able to connect to it next time and<br/>
+        # you'll have to reboot!<br/>
+        cam.close()<br/>
+        <br/>
+    </code>
+    <p>
+        If everything is installed and set up correctly you will see a big window fill your
+        sceen with a lovely pretty picture of what your camera can see! If not, now would 
+        be the time to shout for help!
+    </p>
+
+    <hr/>
+
+    <h2>3. Filters and Effects</h2>
+
+    <p>
+
+    </p>
+
+    <hr/>
+
+    <h2>4. Making Videos</h2>
+
+    <p>
+
+    </p>
+
+    <hr/>
+
+    <h2>5. Home Made Webcam and Website</h2>
+
+    <p>
+
+    </p>
+
+    <hr/>
+
+    <h2>6. Ideas for more things to make...</h2>
+
+    <p>
+
+    </p>
+
+    <hr/>
+
+    <h2>7. Links and references</h2>
+
+    <p>
+
+    </p>
+
+    <hr/>
+
+</div>
